@@ -14,11 +14,12 @@ public class RegisterPage {
      private By emailField = By.xpath("//input[@id='fm-login-id']");
      private By passwordField = By.xpath("//input[@id='fm-login-password']");
 
-     private By signUpButton = By.xpath("(//button[@type='submit'])[2]");
-     private By recowerPasswordButton = By.xpath("//a[text()='Забыли пароль?']");
+     private By signUpButton = By.xpath("//button[@type='submit']");
+     private By recowerPasswordButton = By.xpath("//a[@class='fm-forget']");
 
-     String errorText = "//span[@class='fm-error-message' and text()=/'$s'/]";
-
+     String errorText = "//div[@class='comet-alert-message' and text()=\"%s\"]";
+     
+     
      public RegisterPage emailFieldType(String email) {
           driver.findElement(emailField).sendKeys(email);
           return this;
