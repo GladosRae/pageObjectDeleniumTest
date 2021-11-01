@@ -16,7 +16,7 @@ public class testAliRegisterPage {
     RegisterPage page;
 
     @Before
-    public void setUp() throws MalformedURLException {
+    public void setUp() {
         System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
         driver = new FirefoxDriver();
 
